@@ -1,0 +1,74 @@
+===========================================================
+                   [09_p3_p5_lab_and_plane]
+===========================================================
+id:            aphtu
+name:          Tu, Phuoc
+score:         [0 /0]
+class:         CS003A 36335
+github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-aphtu " target = "_blank">GitHub</a>
+discord:       
+timestamp:     03/11/2024 22:40:39
+commit hash:   19b5b7d
+Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3865877" target = "_blank">Canvas</a>
+grader:        pi(posix)
+===========================================================
+===========================================================
+----        F A I L E D :     M A K E        ---
+============= TEST output :  [aphtu] 
+     FAILED: tests cannot be run. make FAILED. 
+============= MAKE output : [aphtu] 
+-------- stdout:  ---------------------------------
+Scanning dependencies of target gtest
+[  5%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 10%] Linking CXX static library ../../../lib/libgtest.a
+[ 10%] Built target gtest
+Scanning dependencies of target testB
+[ 15%] Building CXX object CMakeFiles/testB.dir/_tests/_test_files/testB.cpp.o
+[ 20%] Building CXX object CMakeFiles/testB.dir/includes/stub/stub.cpp.o
+[ 25%] Linking CXX executable bin/testB
+[ 25%] Built target testB
+Scanning dependencies of target testA
+[ 30%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
+
+-------- stderr:  ---------------------------------
+In file included from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/lab.h:5:10: fatal error: ../../includes\two_d_functions\two_d_functions.h: No such file or directory
+    5 | #include &quot;../../includes\two_d_functions\two_d_functions.h&quot;
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/testA.dir/build.make:63: CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/testA.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
+
+============= CMAKE output: [aphtu] 
+-------- stdout:  ---------------------------------
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /usr/bin/python3.8 (found version &quot;3.8.10&quot;) found components: Interpreter 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /build
+
+-------- stderr:  ---------------------------------
+EMPTY

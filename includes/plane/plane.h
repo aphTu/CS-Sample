@@ -1,7 +1,8 @@
 #ifndef PLANE_H
 #define PLANE_H
 #include <iostream>
-#include "../../includes\two_d_functions\two_d_functions.h"
+#include "../../includes/two_d_functions/two_d_functions.h"
+
 using namespace std;
 
 bool **init_plane();

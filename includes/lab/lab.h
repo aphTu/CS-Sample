@@ -2,7 +2,7 @@
 #define LAB_H
 #include <iostream>
 #include <fstream>
-#include "../../includes\two_d_functions\two_d_functions.h"
+#include "../../includes/two_d_functions/two_d_functions.h"
 
 
 using namespace std;

@@ -3,19 +3,75 @@
 ===========================================================
 id:            aphtu
 name:          Tu, Phuoc
-score:         [0 /0]
+score:         [0/100]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-aphtu " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/11/2024 22:40:39
-commit hash:   19b5b7d
+timestamp:     03/12/2024 12:13:50
+commit hash:   4fe639e
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3865877" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
 ===========================================================
-----        F A I L E D :     M A K E        ---
 ============= TEST output :  [aphtu] 
-     FAILED: tests cannot be run. make FAILED. 
+-------- stdout:  ---------------------------------
+
+
+----------running testA.cpp---------
+
+
+Note: Google Test filter = TwoDTest.ReadWriteNSearch8358
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoDTest
+[ RUN      ] TwoDTest.ReadWriteNSearch8358
+
+
+-------- TwoDTest.ReadWriteNSearch8358:  return code: [0]  --------------
+
+
+----------running testA.cpp---------
+
+
+Note: Google Test filter = TwoDArray.GetNSearch8358
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoDArray
+[ RUN      ] TwoDArray.GetNSearch8358
+
+
+-------- TwoDArray.GetNSearch8358:  return code: [0]  --------------
+
+
+----------running testA.cpp---------
+
+
+Note: Google Test filter = LabTest.LogInOut8158
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LabTest
+[ RUN      ] LabTest.LogInOut8158
+
+
+-------- LabTest.LogInOut8158:  return code: [0]  --------------
+
+
+----------running testA.cpp---------
+
+
+Note: Google Test filter = PlaneTest.ReserveCancel8158
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PlaneTest
+[ RUN      ] PlaneTest.ReserveCancel8158
+
+
+-------- PlaneTest.ReserveCancel8158:  return code: [0]  --------------
+-------- stderr:  ---------------------------------
+EMPTY
+EMPTY
+EMPTY
+EMPTY
 ============= MAKE output : [aphtu] 
 -------- stdout:  ---------------------------------
 Scanning dependencies of target gtest
@@ -29,16 +85,222 @@ Scanning dependencies of target testB
 [ 25%] Built target testB
 Scanning dependencies of target testA
 [ 30%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
+[ 35%] Building CXX object CMakeFiles/testA.dir/includes/stub/stub.cpp.o
+[ 40%] Linking CXX executable bin/testA
+[ 40%] Built target testA
+Scanning dependencies of target basic_test
+[ 45%] Building CXX object CMakeFiles/basic_test.dir/_tests/_test_files/basic_test.cpp.o
+[ 50%] Building CXX object CMakeFiles/basic_test.dir/includes/stub/stub.cpp.o
+[ 55%] Linking CXX executable bin/basic_test
+[ 55%] Built target basic_test
+Scanning dependencies of target main
+[ 60%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[ 65%] Building CXX object CMakeFiles/main.dir/includes/stub/stub.cpp.o
+[ 70%] Linking CXX executable bin/main
+[ 70%] Built target main
+Scanning dependencies of target gmock
+[ 75%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 80%] Linking CXX static library ../../../lib/libgmock.a
+[ 80%] Built target gmock
+Scanning dependencies of target gmock_main
+[ 85%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 90%] Linking CXX static library ../../../lib/libgmock_main.a
+[ 90%] Built target gmock_main
+Scanning dependencies of target gtest_main
+[ 95%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[100%] Linking CXX static library ../../../lib/libgtest_main.a
+[100%] Built target gtest_main
 
 -------- stderr:  ---------------------------------
+In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
+                 from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘int array_size(int*)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   51 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool index_is_valid(int*, int, int)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:57:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   57 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:96:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   96 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  108 | }
+      | ^
 In file included from /_tests/_test_files/testA.cpp:7:
-/_tests/_test_files/../../includes/lab/lab.h:5:10: fatal error: ../../includes\two_d_functions\two_d_functions.h: No such file or directory
-    5 | #include &quot;../../includes\two_d_functions\two_d_functions.h&quot;
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-make[2]: *** [CMakeFiles/testA.dir/build.make:63: CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/testA.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘int** init_lab(int*)’:
+/_tests/_test_files/../../includes/lab/lab.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 | }
+      | ^
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool login(int**, int, int, int)’:
+/_tests/_test_files/../../includes/lab/lab.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
+      | ^
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
+/_tests/_test_files/../../includes/lab/lab.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+In file included from /_tests/_test_files/testA.cpp:8:
+/_tests/_test_files/../../includes/plane/plane.h: In function ‘bool** init_plane()’:
+/_tests/_test_files/../../includes/plane/plane.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 | }
+      | ^
+/_tests/_test_files/../../includes/plane/plane.h: In function ‘bool reserve(bool**, int, int)’:
+/_tests/_test_files/../../includes/plane/plane.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
+      | ^
+/_tests/_test_files/../../includes/plane/plane.h: In function ‘bool cancel(bool**, int, int)’:
+/_tests/_test_files/../../includes/plane/plane.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
+                 from /_tests/_test_files/testA.cpp:7:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** allocate_twod(int*) [with T = int]’:
+/_tests/_test_files/testA.cpp:45:36:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:66:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   66 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
+/_tests/_test_files/testA.cpp:197:30:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   86 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** deallocate_twod(T**, int) [with T = bool]’:
+/_tests/_test_files/testA.cpp:401:35:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:71:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   71 | }
+      | ^
+In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
+                 from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘int array_size(int*)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   51 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool index_is_valid(int*, int, int)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:57:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   57 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:96:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   96 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  108 | }
+      | ^
+In file included from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘int** init_lab(int*)’:
+/_tests/_test_files/../../includes/lab/lab.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 | }
+      | ^
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool login(int**, int, int, int)’:
+/_tests/_test_files/../../includes/lab/lab.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
+      | ^
+/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
+/_tests/_test_files/../../includes/lab/lab.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+In file included from /_tests/_test_files/basic_test.cpp:10:
+/_tests/_test_files/../../includes/plane/plane.h: In function ‘bool** init_plane()’:
+/_tests/_test_files/../../includes/plane/plane.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 | }
+      | ^
+/_tests/_test_files/../../includes/plane/plane.h: In function ‘bool reserve(bool**, int, int)’:
+/_tests/_test_files/../../includes/plane/plane.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
+      | ^
+/_tests/_test_files/../../includes/plane/plane.h: In function ‘bool cancel(bool**, int, int)’:
+/_tests/_test_files/../../includes/plane/plane.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
+                 from /_tests/_test_files/basic_test.cpp:9:
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** allocate_twod(int*) [with T = int]’:
+/_tests/_test_files/basic_test.cpp:17:38:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:66:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   66 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T read_twod(T**, int, int) [with T = int]’:
+/_tests/_test_files/basic_test.cpp:27:43:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   76 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
+/_tests/_test_files/basic_test.cpp:30:20:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   86 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** deallocate_twod(T**, int) [with T = int]’:
+/_tests/_test_files/basic_test.cpp:69:29:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:71:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   71 | }
+      | ^
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** deallocate_twod(T**, int) [with T = bool]’:
+/_tests/_test_files/basic_test.cpp:194:35:   required from here
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:71:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from /main.cpp:3:
+/includes/two_d_functions/two_d_functions.h: In function ‘int array_size(int*)’:
+/includes/two_d_functions/two_d_functions.h:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   51 | }
+      | ^
+/includes/two_d_functions/two_d_functions.h: In function ‘bool index_is_valid(int*, int, int)’:
+/includes/two_d_functions/two_d_functions.h:57:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   57 | }
+      | ^
+/includes/two_d_functions/two_d_functions.h: In function ‘bool search_twod(T**, int*, const T&amp;, int&amp;, int&amp;)’:
+/includes/two_d_functions/two_d_functions.h:96:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   96 | }
+      | ^
+/includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
+/includes/two_d_functions/two_d_functions.h:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  108 | }
+      | ^
+In file included from /main.cpp:4:
+/includes/lab/lab.h: In function ‘int** init_lab(int*)’:
+/includes/lab/lab.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 | }
+      | ^
+/includes/lab/lab.h: In function ‘bool login(int**, int, int, int)’:
+/includes/lab/lab.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
+      | ^
+/includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
+/includes/lab/lab.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+In file included from /main.cpp:5:
+/includes/plane/plane.h: In function ‘bool** init_plane()’:
+/includes/plane/plane.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 | }
+      | ^
+/includes/plane/plane.h: In function ‘bool reserve(bool**, int, int)’:
+/includes/plane/plane.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
+      | ^
+/includes/plane/plane.h: In function ‘bool cancel(bool**, int, int)’:
+/includes/plane/plane.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+In file included from /main.cpp:3:
+/includes/two_d_functions/two_d_functions.h: In instantiation of ‘T** allocate_twod(int*) [with T = int]’:
+/main.cpp:170:36:   required from here
+/includes/two_d_functions/two_d_functions.h:66:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   66 | }
+      | ^
+/includes/two_d_functions/two_d_functions.h: In instantiation of ‘T read_twod(T**, int, int) [with T = int]’:
+/main.cpp:182:35:   required from here
+/includes/two_d_functions/two_d_functions.h:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   76 | }
+      | ^
+/includes/two_d_functions/two_d_functions.h: In instantiation of ‘T&amp; get_twod(T**, int, int) [with T = int]’:
+/main.cpp:217:32:   required from here
+/includes/two_d_functions/two_d_functions.h:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   86 | }
+      | ^
 
 ============= CMAKE output: [aphtu] 
 -------- stdout:  ---------------------------------

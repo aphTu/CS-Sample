@@ -52,7 +52,7 @@ void init_twod_debug(T** twod, int* sizes);
 
 int array_size(int* sizes){
   int counter = 0;
-  const bool debug = true;
+  const bool debug = false;
   while(*sizes != -1){
     counter++;
     sizes++;
@@ -74,7 +74,27 @@ void print_array(int* a){
   }
 }
 bool index_is_valid(int* sizes, int row, int col){
+  assert(!(sizes==nullptr));
 
+  //sizes_p take the row given to find column that belong to that row
+  //how_many_value find how many row the 2d array actually have, does not count -1
+  int* sizes_p = row + sizes;
+  int how_many_value = array_size(sizes);
+  const bool debug = true;
+  if(debug){
+  cout << "how_many_value: " << how_many_value << " and sizes_p is " << *sizes_p << endl; 
+  }
+  //check if the row given is within the boundary of row in the 2d array
+  if(row <= how_many_value) {
+    //if true, it check
+    if(col <= *sizes_p){
+    return true;
+    }
+    return false;
+  }
+  else {
+    return false;
+  }
 }
 
 
@@ -105,7 +125,6 @@ T** allocate_twod(int* sizes){
     if(debug){
       cout << "creating an array of " << *column_walker << " inside row of " << count_row << endl;
     }
-    // *arr_walker = new T [*column_walker];
     *arr_walker = allocate<T>(*column_walker);
     count_row++;
     column_walker++;

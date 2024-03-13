@@ -170,6 +170,137 @@ bool test_init_td(bool debug = false){
   return true;
 }
 
+bool test_index_is_valid(bool debug =false){
+  int capacity = 10;
+  int size = 5;
+  int sizes[capacity];
+  int row;
+  int col;
+  int* sizes_p;
+ 
+  // testing sizes of 1,2,3,4,-1
+  for(int i = 0; i<size;i++){
+    sizes_p = sizes+ i;
+    *sizes_p = i+1;
+    if(i+1 == size){
+      *sizes_p = -1;
+      break;
+    }
+  }
+
+  if(debug){
+    cout << "sizes array is: ";
+    print_array(sizes,size,capacity);
+  }
+  if(1){
+    row = 3;
+    col = 4;
+    bool t_or_f = index_is_valid(sizes,row,col);
+
+    if(debug){
+      cout << "Checking if row " << row << " and col " << col << " is valid in sizes array of " << size - 1 << " row" << endl;
+    }
+
+    if(t_or_f != true){
+    cout << "FAILED: Expected row 3, col 4 to be valid but instead it is " << t_or_f <<endl;
+    return false;
+    }
+  }
+
+   // testing sizes of 3,2,3,2,-1
+  for(int i = 0; i<size;i++){
+    sizes_p = sizes + i;
+    if(i%2 == 0){
+      *sizes_p = 3;
+    }else {
+      *sizes_p = 2;
+    }
+
+    if(i+1 == size)
+    {
+      *sizes_p = -1;
+    }
+  }
+
+
+  if(debug){
+    cout << "sizes array is: ";
+    print_array(sizes,size,capacity);
+  }
+  if(1){
+    row = 3;
+    col = 1;
+    bool t_or_f = index_is_valid(sizes,row,col);
+
+    if(debug){
+      cout << "Checking if row " << row << " and col " << col << " is valid in sizes array of " << size - 1 << " row" << endl;
+    }
+
+    if(t_or_f != true){
+    cout << "FAILED: Expected row 3, col 1 to be valid but instead it is " << t_or_f <<endl;
+    return false;
+    }
+  }
+
+  //testing if the array is 5, 4, -1, 2, 1
+  for(int i = 0; i<size;i++){
+    sizes_p = sizes + i;
+    *sizes_p = 5 - i;
+    if(i+1 == 3){
+      *sizes_p = -1;
+    }
+  }
+
+  if(debug){
+    cout << "sizes array is: ";
+    print_array(sizes,size,capacity);
+  }
+  if(1){
+    row = 3;
+    col = 1;
+    bool t_or_f = index_is_valid(sizes,row,col);
+
+    if(debug){
+      cout << "Checking if row " << row << " and col " << col << " is invalid in sizes array of 2 row" << endl;
+    }
+
+    if(t_or_f != false){
+    cout << "FAILED: Expected row 3, col 1 to be invalid but instead it is " << t_or_f <<endl;
+    return false;
+    }
+  }
+
+
+  //testing if the array is -1, 4, 3, 2, 1
+  for(int i = 0; i<size;i++){
+    sizes_p = sizes + i;
+    *sizes_p = 5 - i;
+    if(i == 0){
+      *sizes_p = -1;
+    }
+  }
+
+  if(debug){
+    cout << "sizes array is: ";
+    print_array(sizes,size,capacity);
+  }
+  if(1){
+    row = 3;
+    col = 1;
+    bool t_or_f = index_is_valid(sizes,row,col);
+
+    if(debug){
+      cout << "Checking if row " << row << " and col " << col << " is invalid in sizes array of 0 row" << endl;
+    }
+
+    if(t_or_f != false){
+    cout << "FAILED: Expected row 3, col 1 to be invalid but instead it is " << t_or_f <<endl;
+    return false;
+    }
+  }
+
+  return true;
+}
 
 TEST(TEST_STUB, TestStub) { 
   //EXPECT_EQ(0, <your individual test functions are called here>)
@@ -180,6 +311,9 @@ TEST(TEST_INIT,TestInit){
   EXPECT_EQ(1,test_init_td(false));
 }
 
+TEST(TEST_INDEX_IS_VALLID,TestIndexIsValid){
+  EXPECT_EQ(1,test_index_is_valid(true));
+}
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

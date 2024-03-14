@@ -302,39 +302,167 @@ bool test_index_is_valid(bool debug =false){
   return true;
 }
 
-bool test_search_twod_bool(bool debug = false){
+bool test_search_twod(bool debug = false){
 int sizes [] = { 6, 3, 5, 2 , 1 , -1};
 int** twod_arr = allocate_twod <int> (sizes);
 int key;
 int row;
 int col;
-
+string tabs = "//---------------------// \n";
 init_twod(twod_arr,sizes,-1);
 if(debug){
-  cout << "Original Array: ";
+  cout << "Original Array: " << endl;
   print_twod(twod_arr,sizes);
 }
 
-//checking num 4 in row 2, col 1
+
+//trying to find 4 in row 2 and col 1
 if(1){
   key = 4;
   row = 2;
   col = 1;
-  
   write_twod(twod_arr,row,col,key);
-  print_twod(twod_arr,sizes);
-  int found = search_twod(twod_arr,sizes, key, row, col);
+  int* found = search_twod(twod_arr,sizes,key);
+
   if(debug){
-    cout << "Checking if number " << key << " in row " << row << " and colum " << col << endl;
-    print_twod(twod_arr,sizes);
+    cout << tabs;
+    cout << "Trying to find " << key << " in array" << endl;
+    print_twod(twod_arr,sizes); 
   }
 
-  if(found != true){
-    cout << "FAILED: Expected to find num " << key << " in row " << row << " and column " << col << " but it is not there" << endl; 
+  int** row_w = twod_arr + row;
+  int* col_w = *row_w + col;
+  if(*row_w != found && *col_w != key){
+    cout << "FAILED: Expected to find  " << key << " at row " << row << " and col " << col << " but instead found " << *col_w << endl;
+    return false;
+  }
+  
+}
+
+//trying to find 5 in row 1 and col 2
+if(1){
+  key = 5;
+  row = 1;
+  col = 2;
+  write_twod(twod_arr,row,col,key);
+  int* found = search_twod(twod_arr,sizes,key);
+
+  if(debug){
+    cout << tabs;
+    cout << "Trying to find " << key << " in array" << endl;
+    print_twod(twod_arr,sizes); 
+  }
+
+  int** row_w = twod_arr + row;
+  int* col_w = *row_w + col;
+  if(*row_w != found && *col_w != key){
+    cout << "FAILED: Expected to find  " << key << " at row " << row << " and col " << col << " but instead found " << *col_w  << endl;
+    return false;
+  }
+  
+}
+
+//trying to find 9 in row 4 and col 0
+if(1){
+  key = 9;
+  row = 4;
+  col = 0;
+  write_twod(twod_arr,row,col,key);
+  int* found = search_twod(twod_arr,sizes,key);
+  if(debug){
+    cout << tabs;
+    cout << "Trying to find " << key << " in array" << endl;
+    print_twod(twod_arr,sizes); 
+  }
+
+  int** row_w = twod_arr + row;
+  int* col_w = *row_w + col;
+  if(*row_w != found && *col_w != key){
+    cout << "FAILED: Expected to find  " << key << " at row " << row << " and col " << col << " but instead found " << *col_w  << endl;
+    return false;
   }
 }
 
+//trying to find 10 in row 0 and col 0
+if(1){
+  key = 10;
+  row = 0;
+  col = 0;
+  write_twod(twod_arr,row,col,key);
+  int* found = search_twod(twod_arr,sizes,key);
+  if(debug){
+    cout << tabs;
+    cout << "Trying to find " << key << " in array" << endl;
+    print_twod(twod_arr,sizes); 
+  }
+
+  int** row_w = twod_arr + row;
+  int* col_w = *row_w + col;
+  if(*row_w != found && *col_w != key){
+    cout << "FAILED: Expected to find  " << key << " at row " << row << " and col " << col << " but instead found " << *col_w  << endl;
+    return false;
+  }
 }
+
+//trying to find a number not in the array
+if(1){
+  key = 2;
+  row = 4;
+  col = 0;
+  int* found = search_twod(twod_arr,sizes,key);
+  if(debug){
+    cout << tabs;
+    cout << "Trying to find " << key << " in array" << endl;
+    print_twod(twod_arr,sizes); 
+  }
+
+  int** row_w = twod_arr + row;
+  int* col_w = *row_w + col;
+  if(*col_w == key){
+    cout << "FAILED: Expected to find  " << key << " at row " << row << " and col " << col << " but instead found " << *col_w  << endl;
+    return false;
+  }
+}
+
+
+
+
+//-----------------------//
+//testing char array
+char** char_twod_arr = allocate_twod <char> (sizes);
+char char_key;
+init_twod(char_twod_arr,sizes,'x');
+if(debug){
+  cout << "Original Array: " << endl;
+  print_twod(char_twod_arr,sizes);
+}
+
+//trying to find 'a' in the array in row 2, col 4
+
+if(1){
+  char_key = 'a';
+  row = 2;
+  col = 4;
+  write_twod(char_twod_arr,row,col,char_key);
+  char* char_found = search_twod(char_twod_arr,sizes,char_key);
+  if(debug){
+    cout << tabs;
+    cout << "Trying to find " << key << " in array" << endl;
+    print_twod(char_twod_arr,sizes); 
+  }
+
+  char** row_w = char_twod_arr + row;
+  char* col_w = *row_w + col;
+  if(*row_w != char_found && *col_w != char_key){
+    cout << "FAILED: Expected to find  " << char_key << " at row " << row << " and col " << col << " but instead found " << *col_w  << endl;
+    return false;
+  }
+}
+return true;
+}
+
+
+
 
 TEST(TEST_STUB, TestStub) { 
   //EXPECT_EQ(0, <your individual test functions are called here>)
@@ -350,7 +478,7 @@ TEST(TEST_INDEX_IS_VALLID,TestIndexIsValid){
 }
 
 TEST(TEST_SEARCH_TWOD, TestSearchTwod_bool){
-  EXPECT_EQ(1,test_search_twod_bool(true));
+  EXPECT_EQ(1,test_search_twod(false));
 }
 
 int main(int argc, char **argv) {

@@ -80,7 +80,7 @@ bool index_is_valid(int* sizes, int row, int col){
   //how_many_value find how many row the 2d array actually have, does not count -1
   int* sizes_p = row + sizes;
   int how_many_value = array_size(sizes);
-  const bool debug = true;
+  const bool debug = false;
   if(debug){
   cout << "how_many_value: " << how_many_value << " and sizes_p is " << *sizes_p << endl; 
   }
@@ -140,25 +140,20 @@ T** deallocate_twod(T** twod, int size){
 
 template <class T>
 T read_twod(T** twod, int row, int col){
-
+  T reading = get_twod(twod,row,col);
+  return reading;
 }
 
 template <class T>
 void write_twod(T** twod, int row, int col, const T& item){
-  T** row_w = twod + row;
-  T* col_w = *row_w + col;
-  
-  const bool debug = true;
-
-  bool found = index_is_valid;
-  if(found){
-  *col_w = item;
-  }
+  get_twod(twod,row,col) = item; 
 }
 
 template <class T>
 T& get_twod(T** twod, int row, int col){
-
+  T** row_w = twod + row;
+  T* col_w = *row_w + col;
+  return *col_w;
 }
 
 template<class T>
@@ -190,43 +185,65 @@ void init_twod(T** twod, int* sizes, T init_item){
 
 template<class T>
 bool search_twod(T** twod, int* sizes, const T& key, int& row, int& col){
-  T** row_w = twod;
-  T* col_w;
-  int* sizes_p = sizes;
+  
+  
+  
 
-  const bool debug = true;
+  // int row_counter =0;
+  // while(*row_w != nullptr){
+  //   col_w = *row_w;
+  //   for(int i =0;i<*sizes_p;i++){
+  //     if(debug){
+  //       cout << " row is " << row_counter << " and col is " << i << endl;
+  //     }
 
-  int row_counter =0;
-  while(row_w != nullptr){
-    
-    col_w = *row_w;
-    for(int i =0;i<*sizes_p;i++){
-      if(debug){
-        cout << " row is " << row_counter << " and col is " << i << endl;
-      }
-      if(i == col && row_counter== row){
-        if(debug){
-          cout << "checking if " << *col_w << " equal to " << key << endl;
-        }
-        if(*col_w == key){
-          return true;
-        }
-        return false;
-      }
-      col_w++;
-    }
-    sizes_p++;
-    row_w++;
-    row_counter++;
-  }
+  //     if(i == col && row_counter== row){
+  //       if(debug){
+  //         cout << "checking if " << *col_w << " equal to " << key << endl;
+  //       }
 
+  //       if(*col_w == key){
+  //         return true;
+  //       } else {
+  //         return false;
+  //       }
+  //     }
+
+  //     col_w++;
+  //   }
+  //   sizes_p++;
+  //   row_w++;
+  //   row_counter++;
+  // }
 }
 
 //return a pointer to the item if found, nullptr if not found: 
 //                                                 (Ms. Barskhian)
 template<class T> 
 T* search_twod(T** twod, int* sizes, const T& key){
-  
+  T** row_w = twod;
+  T* col_w;
+  int* sizes_p = sizes;
+  const bool debug = false;
+  int row_counter = 0;
+
+  while(*row_w!= nullptr){
+    col_w = *row_w;
+    if(debug){
+    cout << "row is "<< row_counter;
+    }
+    T* found = search_entry(col_w, *sizes_p, key);
+    if(found != nullptr){
+      if(debug){
+        cout << "found " << key << " at row " << row_counter;
+      }
+      return found;
+    }
+    row_w++;
+    sizes_p++;
+    row_counter++;
+  }
+  return nullptr;
 } 
 
 template <class T>

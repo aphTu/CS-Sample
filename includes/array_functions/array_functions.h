@@ -126,7 +126,7 @@ T* search_entry(T* a, int size, const T& find_me){
     }
     a_p++;
   }
-  return NULL;
+  return nullptr;
 }      //search for 'find me'
 
 template <class T>

@@ -86,7 +86,7 @@ bool index_is_valid(int* sizes, int row, int col){
   }
   //check if the row given is within the boundary of row in the 2d array
   if(row <= how_many_value) {
-    //if true, it check
+    //if true, it then check if col given is within the col in the 2d array
     if(col <= *sizes_p){
     return true;
     }
@@ -145,7 +145,15 @@ T read_twod(T** twod, int row, int col){
 
 template <class T>
 void write_twod(T** twod, int row, int col, const T& item){
+  T** row_w = twod + row;
+  T* col_w = *row_w + col;
+  
+  const bool debug = true;
 
+  bool found = index_is_valid;
+  if(found){
+  *col_w = item;
+  }
 }
 
 template <class T>
@@ -182,6 +190,35 @@ void init_twod(T** twod, int* sizes, T init_item){
 
 template<class T>
 bool search_twod(T** twod, int* sizes, const T& key, int& row, int& col){
+  T** row_w = twod;
+  T* col_w;
+  int* sizes_p = sizes;
+
+  const bool debug = true;
+
+  int row_counter =0;
+  while(row_w != nullptr){
+    
+    col_w = *row_w;
+    for(int i =0;i<*sizes_p;i++){
+      if(debug){
+        cout << " row is " << row_counter << " and col is " << i << endl;
+      }
+      if(i == col && row_counter== row){
+        if(debug){
+          cout << "checking if " << *col_w << " equal to " << key << endl;
+        }
+        if(*col_w == key){
+          return true;
+        }
+        return false;
+      }
+      col_w++;
+    }
+    sizes_p++;
+    row_w++;
+    row_counter++;
+  }
 
 }
 
@@ -189,7 +226,7 @@ bool search_twod(T** twod, int* sizes, const T& key, int& row, int& col){
 //                                                 (Ms. Barskhian)
 template<class T> 
 T* search_twod(T** twod, int* sizes, const T& key){
-
+  
 } 
 
 template <class T>

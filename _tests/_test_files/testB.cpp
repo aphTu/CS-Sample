@@ -302,6 +302,40 @@ bool test_index_is_valid(bool debug =false){
   return true;
 }
 
+bool test_search_twod_bool(bool debug = false){
+int sizes [] = { 6, 3, 5, 2 , 1 , -1};
+int** twod_arr = allocate_twod <int> (sizes);
+int key;
+int row;
+int col;
+
+init_twod(twod_arr,sizes,-1);
+if(debug){
+  cout << "Original Array: ";
+  print_twod(twod_arr,sizes);
+}
+
+//checking num 4 in row 2, col 1
+if(1){
+  key = 4;
+  row = 2;
+  col = 1;
+  
+  write_twod(twod_arr,row,col,key);
+  print_twod(twod_arr,sizes);
+  int found = search_twod(twod_arr,sizes, key, row, col);
+  if(debug){
+    cout << "Checking if number " << key << " in row " << row << " and colum " << col << endl;
+    print_twod(twod_arr,sizes);
+  }
+
+  if(found != true){
+    cout << "FAILED: Expected to find num " << key << " in row " << row << " and column " << col << " but it is not there" << endl; 
+  }
+}
+
+}
+
 TEST(TEST_STUB, TestStub) { 
   //EXPECT_EQ(0, <your individual test functions are called here>)
   EXPECT_EQ(1, test_stub(false));
@@ -312,7 +346,11 @@ TEST(TEST_INIT,TestInit){
 }
 
 TEST(TEST_INDEX_IS_VALLID,TestIndexIsValid){
-  EXPECT_EQ(1,test_index_is_valid(true));
+  EXPECT_EQ(1,test_index_is_valid(false));
+}
+
+TEST(TEST_SEARCH_TWOD, TestSearchTwod_bool){
+  EXPECT_EQ(1,test_search_twod_bool(true));
 }
 
 int main(int argc, char **argv) {

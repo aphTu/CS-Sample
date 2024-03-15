@@ -114,8 +114,12 @@ T** allocate_twod(int* sizes){
   //-----------------------//
 
   int row = array_size(sizes);
+  //create the row needed for the array
   arr = new T* [row+1];
   arr_walker = arr;
+  //arr_walker walk throughout the created space
+  //column_walker is the pointer that point to sizes
+  //dereferencing it gives us the size we need to allocate
   while(1){
     if(*column_walker == -1)
     {
@@ -135,22 +139,42 @@ T** allocate_twod(int* sizes){
 
 template <class T>
 T** deallocate_twod(T** twod, int size){
-
+  T** row_w = twod;
+  T* col_w;
+  //delete the pointer within the row first
+  //delete the entire 2d pointer
+  while(*row_w != nullptr){
+   col_w = *row_w;
+   delete []col_w;
+   row_w++; 
+  }
+  delete []twod;
+  return nullptr;
 }
 
 template <class T>
 T read_twod(T** twod, int row, int col){
+  assert(!(row < 0));
+  assert(!(col < 0));
+  assert(!(twod == nullptr));
   T reading = get_twod(twod,row,col);
   return reading;
 }
 
 template <class T>
 void write_twod(T** twod, int row, int col, const T& item){
+  assert(!(row < 0));
+  assert(!(col < 0));
+  assert(!(twod == nullptr));
   get_twod(twod,row,col) = item; 
 }
 
 template <class T>
 T& get_twod(T** twod, int row, int col){
+  assert(!(row < 0));
+  assert(!(col < 0));
+  assert(!(twod == nullptr));
+
   T** row_w = twod + row;
   T* col_w = *row_w + col;
   return *col_w;
@@ -163,17 +187,24 @@ void init_twod(T** twod, int* sizes, T init_item){
   T** row_w = twod;
   T*col_w;
   int*sizes_p = sizes;
+
+  //-------debug var------//
   const bool debug = false;
   int row_counter = 0;
+  //---------------------//
   if(debug){
     cout << "Beginning to initialize the element in the 2d array" << endl;
   }
+
+  // row_w run through the allocated space within the 2d array
+  //col_w run through the space within those allocated spaces
   while(*row_w != nullptr){
     col_w = *row_w;
     for(int i = 0; i<*sizes_p;i++){
       if(debug){
         cout << "placing " << init_item << " into " << i << " column, row  " << row_counter << endl;
       }
+      //placing the initialize item inside each column of that row
        *col_w = init_item;
        col_w++;
     } 
@@ -185,36 +216,40 @@ void init_twod(T** twod, int* sizes, T init_item){
 
 template<class T>
 bool search_twod(T** twod, int* sizes, const T& key, int& row, int& col){
+  T**row_w = twod;
+  T*col_w;
+  int* sizes_p = sizes;
+  const bool debug = false;
+  //row_counter is the value that will be return into row
+  int row_counter = 0;
+
+  //loop will continue until it find the row and col
+  //meaning key is in the array
+
+  //or when *row_w reach nullptr
+  //meaning key is not in the array
+  while(*row_w != nullptr){
+    col_w = *row_w;
+
+    //index is the index key is at
+    //if it -1, it mean it not in that row
+    //if it the key, it mean it in that row
+    int index = search(col_w,*sizes_p,key);
+    T* col_current = index + col_w;
+    if(*col_current== key){
+        if(debug){
+          cout << "correct row is " << row_counter << " and correct col is " << index << endl;  
+        }
+        row = row_counter;
+        col = index;
+        return true;
+      }
+    sizes_p++;
+    row_w++;
+    row_counter++;
+  }
   
-  
-  
-
-  // int row_counter =0;
-  // while(*row_w != nullptr){
-  //   col_w = *row_w;
-  //   for(int i =0;i<*sizes_p;i++){
-  //     if(debug){
-  //       cout << " row is " << row_counter << " and col is " << i << endl;
-  //     }
-
-  //     if(i == col && row_counter== row){
-  //       if(debug){
-  //         cout << "checking if " << *col_w << " equal to " << key << endl;
-  //       }
-
-  //       if(*col_w == key){
-  //         return true;
-  //       } else {
-  //         return false;
-  //       }
-  //     }
-
-  //     col_w++;
-  //   }
-  //   sizes_p++;
-  //   row_w++;
-  //   row_counter++;
-  // }
+  return false;
 }
 
 //return a pointer to the item if found, nullptr if not found: 
@@ -232,6 +267,9 @@ T* search_twod(T** twod, int* sizes, const T& key){
     if(debug){
     cout << "row is "<< row_counter;
     }
+    //found take in the pointer from search_entry
+    //that pointer is pointing at position of key if key is in the array
+    //pointer point at nullptr if it did not find key
     T* found = search_entry(col_w, *sizes_p, key);
     if(found != nullptr){
       if(debug){
@@ -239,6 +277,7 @@ T* search_twod(T** twod, int* sizes, const T& key){
       }
       return found;
     }
+    //changes the row
     row_w++;
     sizes_p++;
     row_counter++;

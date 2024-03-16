@@ -13,7 +13,7 @@ void print_plane(bool **plane);
 
 //=======================================================================
 bool **init_plane(){
-
+  
 }
 bool reserve(bool **plane, int row, int seat){
 

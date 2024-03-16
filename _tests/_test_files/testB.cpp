@@ -953,7 +953,7 @@ TEST(TEST_READ_TWOD,TestReadTwod){
 }
 
 TEST(TEST_WRITE_TWOD,TestWriteTwod){
-  EXPECT_EQ(1,test_write_twod(false));
+  EXPECT_EQ(1,test_write_twod(true));
 }
 
 TEST(TEST_SEARCH_TWOD,TestSearchTwodBool){

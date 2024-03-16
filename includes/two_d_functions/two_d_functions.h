@@ -46,6 +46,12 @@ ostream& print_twod(T** twod, int* sizes, ostream& outs = cout);
 template<class T>
 void init_twod_debug(T** twod, int* sizes);
 
+template <typename T>
+void delete_repeats(T* a, int& size);
+
+template <class T>
+bool delete_keys_twod(T**twod,int* sizes, T key);
+
 
 //=======================================================================
 
@@ -78,7 +84,7 @@ bool index_is_valid(int* sizes, int row, int col){
 
   //sizes_p take the row given to find column that belong to that row
   //how_many_value find how many row the 2d array actually have, does not count -1
-  int* sizes_p = row + sizes;
+  int* sizes_p = row + sizes; 
   int how_many_value = array_size(sizes);
   const bool debug = false;
   if(debug){
@@ -157,6 +163,7 @@ T read_twod(T** twod, int row, int col){
   assert(!(row < 0));
   assert(!(col < 0));
   assert(!(twod == nullptr));
+  
   T reading = get_twod(twod,row,col);
   return reading;
 }
@@ -326,6 +333,59 @@ void init_twod_debug(T** twod, int* sizes ){
     row_w++;
     row_counter++; 
   } 
+}
+
+template <typename T>
+void delete_repeats(T*a, int& size){ 
+  assert(!(size <= 0));
+  T* a_p = a;
+  bool debug = false;  
+  for (int i = 0; i < size; i++){
+    //i_walker walk along the array depending on i
+    //the code check if current address of the array matches the return address of search_entry
+
+    T* i_walker = a_p + i;
+    T* current = i_walker;
+    T* found = search_entry(a_p, size , *current);
+    if(debug){
+      cout << "checking if " << *current << " is repeated or not" << endl;
+    }
+
+    //if not equal the code will delete the code and decrement i by 1
+    if(current != found){
+      if(debug){
+      cout << *current << " is repeated, deleting it" <<endl;
+      }
+      shift_left(a_p,size,current);
+      i--;
+    }
+  }
+}
+
+
+template <class T>
+bool delete_keys_twod(T**twod,int* sizes, T key){
+  T** row_w = twod;
+  T* col_w;
+  int* sizes_p = sizes;
+
+  int row;
+  int col;
+  T* still_repeat = search_twod(twod,sizes,key);
+  if(still_repeat == nullptr){
+    return false;
+  }
+  while(1){
+    bool found = search_twod(twod,sizes,key,row,col);
+    if(found == true){
+      write_twod(twod,row,col,0);
+    }
+    
+    still_repeat = search_twod(twod,sizes,key);
+    if(still_repeat == nullptr){
+      return true;
+    }
+  }
 }
 
 #endif

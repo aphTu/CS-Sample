@@ -3,12 +3,12 @@
 ===========================================================
 id:            aphtu
 name:          Tu, Phuoc
-score:         [70/100]
+score:         [85/100]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-aphtu " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/14/2024 23:13:57
-commit hash:   a32d08a
+timestamp:     03/16/2024 00:43:14
+commit hash:   d0bef7d
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3865877" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
@@ -63,23 +63,12 @@ Note: Google Test filter = LabTest.LogInOut8158
 [----------] Global test environment set-up.
 [----------] 1 test from LabTest
 [ RUN      ] LabTest.LogInOut8158
-logged into lab 3, station: 2 with id: 33
-                but found 0 at that position.
-/_tests/_test_files/testA.cpp:434: Failure
-Expected equality of these values:
-  success
-    Which is: false
-  true
-[  FAILED  ] LabTest.LogInOut8158 (0 ms)
+[       OK ] LabTest.LogInOut8158 (0 ms)
 [----------] 1 test from LabTest (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] LabTest.LogInOut8158
-
- 1 FAILED TEST
+[  PASSED  ] 1 test.
 
 
 -------- LabTest.LogInOut8158:  return code: [0]  --------------
@@ -144,21 +133,8 @@ Scanning dependencies of target gtest_main
 In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
                  from /_tests/_test_files/testA.cpp:7:
 /_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  300 | }
-      | ^
-In file included from /_tests/_test_files/testA.cpp:7:
-/_tests/_test_files/../../includes/lab/lab.h: In function ‘int** init_lab(int*)’:
-/_tests/_test_files/../../includes/lab/lab.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   17 | }
-      | ^
-/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool login(int**, int, int, int)’:
-/_tests/_test_files/../../includes/lab/lab.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   20 | }
-      | ^
-/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
-/_tests/_test_files/../../includes/lab/lab.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   23 | }
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:307:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  307 | }
       | ^
 In file included from /_tests/_test_files/testA.cpp:8:
 /_tests/_test_files/../../includes/plane/plane.h: In function ‘bool** init_plane()’:
@@ -176,21 +152,8 @@ In file included from /_tests/_test_files/testA.cpp:8:
 In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
                  from /_tests/_test_files/basic_test.cpp:9:
 /_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  300 | }
-      | ^
-In file included from /_tests/_test_files/basic_test.cpp:9:
-/_tests/_test_files/../../includes/lab/lab.h: In function ‘int** init_lab(int*)’:
-/_tests/_test_files/../../includes/lab/lab.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   17 | }
-      | ^
-/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool login(int**, int, int, int)’:
-/_tests/_test_files/../../includes/lab/lab.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   20 | }
-      | ^
-/_tests/_test_files/../../includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
-/_tests/_test_files/../../includes/lab/lab.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   23 | }
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:307:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  307 | }
       | ^
 In file included from /_tests/_test_files/basic_test.cpp:10:
 /_tests/_test_files/../../includes/plane/plane.h: In function ‘bool** init_plane()’:
@@ -207,21 +170,8 @@ In file included from /_tests/_test_files/basic_test.cpp:10:
       | ^
 In file included from /main.cpp:3:
 /includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/includes/two_d_functions/two_d_functions.h:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  300 | }
-      | ^
-In file included from /main.cpp:4:
-/includes/lab/lab.h: In function ‘int** init_lab(int*)’:
-/includes/lab/lab.h:17:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   17 | }
-      | ^
-/includes/lab/lab.h: In function ‘bool login(int**, int, int, int)’:
-/includes/lab/lab.h:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   20 | }
-      | ^
-/includes/lab/lab.h: In function ‘bool logout(int**, int*, int)’:
-/includes/lab/lab.h:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   23 | }
+/includes/two_d_functions/two_d_functions.h:307:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  307 | }
       | ^
 In file included from /main.cpp:5:
 /includes/plane/plane.h: In function ‘bool** init_plane()’:

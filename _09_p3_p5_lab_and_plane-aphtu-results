@@ -3,156 +3,72 @@
 ===========================================================
 id:            aphtu
 name:          Tu, Phuoc
-score:         [100/100]
+score:         [0 /0]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-aphtu " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/16/2024 23:14:38
-commit hash:   d5bb6ca
+timestamp:     03/17/2024 00:42:13
+commit hash:   749ddaf
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3865877" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
 ===========================================================
+----        F A I L E D :     M A K E        ---
 ============= TEST output :  [aphtu] 
--------- stdout:  ---------------------------------
-
-
-----------running testA.cpp---------
-
-
-Note: Google Test filter = TwoDTest.ReadWriteNSearch8358
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from TwoDTest
-[ RUN      ] TwoDTest.ReadWriteNSearch8358
-[       OK ] TwoDTest.ReadWriteNSearch8358 (0 ms)
-[----------] 1 test from TwoDTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-
-
--------- TwoDTest.ReadWriteNSearch8358:  return code: [0]  --------------
-
-
-----------running testA.cpp---------
-
-
-Note: Google Test filter = TwoDArray.GetNSearch8358
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from TwoDArray
-[ RUN      ] TwoDArray.GetNSearch8358
-[       OK ] TwoDArray.GetNSearch8358 (0 ms)
-[----------] 1 test from TwoDArray (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
-[  PASSED  ] 1 test.
-
-
--------- TwoDArray.GetNSearch8358:  return code: [0]  --------------
-
-
-----------running testA.cpp---------
-
-
-Note: Google Test filter = LabTest.LogInOut8158
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from LabTest
-[ RUN      ] LabTest.LogInOut8158
-[       OK ] LabTest.LogInOut8158 (0 ms)
-[----------] 1 test from LabTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-
-
--------- LabTest.LogInOut8158:  return code: [0]  --------------
-
-
-----------running testA.cpp---------
-
-
-Note: Google Test filter = PlaneTest.ReserveCancel8158
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from PlaneTest
-[ RUN      ] PlaneTest.ReserveCancel8158
-[       OK ] PlaneTest.ReserveCancel8158 (0 ms)
-[----------] 1 test from PlaneTest (0 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 1 test.
-
-
--------- PlaneTest.ReserveCancel8158:  return code: [0]  --------------
--------- stderr:  ---------------------------------
-EMPTY
-EMPTY
-EMPTY
-EMPTY
+     FAILED: tests cannot be run. make FAILED. 
 ============= MAKE output : [aphtu] 
 -------- stdout:  ---------------------------------
 Scanning dependencies of target gtest
-[  5%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-[ 10%] Linking CXX static library ../../../lib/libgtest.a
-[ 10%] Built target gtest
+[  4%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[  8%] Linking CXX static library ../../../lib/libgtest.a
+[  8%] Built target gtest
 Scanning dependencies of target testB
-[ 15%] Building CXX object CMakeFiles/testB.dir/_tests/_test_files/testB.cpp.o
+[ 12%] Building CXX object CMakeFiles/testB.dir/_tests/_test_files/testB.cpp.o
+[ 16%] Building CXX object CMakeFiles/testB.dir/includes/lab/lab.cpp.o
 [ 20%] Building CXX object CMakeFiles/testB.dir/includes/stub/stub.cpp.o
 [ 25%] Linking CXX executable bin/testB
 [ 25%] Built target testB
 Scanning dependencies of target testA
-[ 30%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
-[ 35%] Building CXX object CMakeFiles/testA.dir/includes/stub/stub.cpp.o
-[ 40%] Linking CXX executable bin/testA
-[ 40%] Built target testA
-Scanning dependencies of target basic_test
-[ 45%] Building CXX object CMakeFiles/basic_test.dir/_tests/_test_files/basic_test.cpp.o
-[ 50%] Building CXX object CMakeFiles/basic_test.dir/includes/stub/stub.cpp.o
-[ 55%] Linking CXX executable bin/basic_test
-[ 55%] Built target basic_test
-Scanning dependencies of target main
-[ 60%] Building CXX object CMakeFiles/main.dir/main.cpp.o
-[ 65%] Building CXX object CMakeFiles/main.dir/includes/stub/stub.cpp.o
-[ 70%] Linking CXX executable bin/main
-[ 70%] Built target main
-Scanning dependencies of target gmock
-[ 75%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
-[ 80%] Linking CXX static library ../../../lib/libgmock.a
-[ 80%] Built target gmock
-Scanning dependencies of target gmock_main
-[ 85%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
-[ 90%] Linking CXX static library ../../../lib/libgmock_main.a
-[ 90%] Built target gmock_main
-Scanning dependencies of target gtest_main
-[ 95%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-[100%] Linking CXX static library ../../../lib/libgtest_main.a
-[100%] Built target gtest_main
+[ 29%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
+[ 33%] Building CXX object CMakeFiles/testA.dir/includes/lab/lab.cpp.o
+[ 37%] Building CXX object CMakeFiles/testA.dir/includes/stub/stub.cpp.o
+[ 41%] Linking CXX executable bin/testA
 
 -------- stderr:  ---------------------------------
+In file included from /includes/lab/lab.h:5,
+                 from /includes/lab/lab.cpp:3:
+/includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
+/includes/lab/../../includes/two_d_functions/two_d_functions.h:309:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  309 | }
+      | ^
 In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
                  from /_tests/_test_files/testA.cpp:7:
 /_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:307:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  307 | }
+/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:309:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  309 | }
       | ^
-In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
-                 from /_tests/_test_files/basic_test.cpp:9:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:307:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  307 | }
+In file included from /includes/lab/lab.h:5,
+                 from /includes/lab/lab.cpp:3:
+/includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
+/includes/lab/../../includes/two_d_functions/two_d_functions.h:309:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  309 | }
       | ^
-In file included from /main.cpp:3:
-/includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/includes/two_d_functions/two_d_functions.h:307:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  307 | }
-      | ^
+/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `array_size(int*)&#x27;:
+lab.cpp:(.text+0x0): multiple definition of `array_size(int*)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `print_array(int*)&#x27;:
+lab.cpp:(.text+0x80): multiple definition of `print_array(int*)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x80): first defined here
+/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `index_is_valid(int*, int, int)&#x27;:
+lab.cpp:(.text+0x27c): multiple definition of `index_is_valid(int*, int, int)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x27c): first defined here
+/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `init_lab(int*)&#x27;:
+lab.cpp:(.text+0x408): multiple definition of `init_lab(int*)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x408): first defined here
+/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `login(int**, int, int, int)&#x27;:
+lab.cpp:(.text+0x498): multiple definition of `login(int**, int, int, int)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x498): first defined here
+/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `logout(int**, int*, int)&#x27;:
+lab.cpp:(.text+0x574): multiple definition of `logout(int**, int*, int)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x574): first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/testA.dir/build.make:115: bin/testA] Error 1
+make[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/testA.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
 
 ============= CMAKE output: [aphtu] 
 -------- stdout:  ---------------------------------

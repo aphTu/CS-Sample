@@ -81,7 +81,9 @@ void print_array(int* a){
 }
 bool index_is_valid(int* sizes, int row, int col){
   assert(!(sizes==nullptr));
-
+  if(row <= -1 || col <= -1){
+    return false;
+  }
   //sizes_p take the row given to find column that belong to that row
   //how_many_value find how many row the 2d array actually have, does not count -1
   int* sizes_p = row + sizes; 

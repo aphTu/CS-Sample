@@ -2,7 +2,7 @@
 #define LAB_APP_H
 #include "../../includes/lab/lab.h"
 
-void menu(int** labs, int*sizes);
+void menu_lab(int** labs, int*sizes);
 void choice_i(int** labs, int* sizes);
 void choice_o(int** labs, int*sizes);
 
@@ -10,7 +10,7 @@ void choice_o(int** labs, int*sizes);
 
 //----------------------------------//
 
-void menu(int** labs, int* sizes){
+void menu_lab(int** labs, int* sizes){
   char choice;
   string tabs = "\n//-------------------------//\n";
   cout << setw(20) <<"Welcome to LAB program" << endl;
@@ -40,8 +40,7 @@ void menu(int** labs, int* sizes){
 
 void choice_i(int** labs, int* sizes){
   int lab, station, id;
-  bool occupied, not_valid;
-  const bool debug = true;
+  const bool debug = false;
   cout << "\nWhat lab station would you like to login?" << endl;
   
   do {

@@ -7,8 +7,8 @@ score:         [100/100]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-aphtu " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/17/2024 20:51:36
-commit hash:   0a23edb
+timestamp:     03/17/2024 21:14:41
+commit hash:   1f96b9b
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3865877" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
@@ -25,11 +25,11 @@ Note: Google Test filter = TwoDTest.ReadWriteNSearch8358
 [----------] Global test environment set-up.
 [----------] 1 test from TwoDTest
 [ RUN      ] TwoDTest.ReadWriteNSearch8358
-[       OK ] TwoDTest.ReadWriteNSearch8358 (1 ms)
-[----------] 1 test from TwoDTest (1 ms total)
+[       OK ] TwoDTest.ReadWriteNSearch8358 (0 ms)
+[----------] 1 test from TwoDTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 
 
@@ -48,7 +48,7 @@ Note: Google Test filter = TwoDArray.GetNSearch8358
 [----------] 1 test from TwoDArray (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 
 
@@ -63,8 +63,8 @@ Note: Google Test filter = LabTest.LogInOut8158
 [----------] Global test environment set-up.
 [----------] 1 test from LabTest
 [ RUN      ] LabTest.LogInOut8158
-[       OK ] LabTest.LogInOut8158 (1 ms)
-[----------] 1 test from LabTest (1 ms total)
+[       OK ] LabTest.LogInOut8158 (0 ms)
+[----------] 1 test from LabTest (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
@@ -99,41 +99,37 @@ EMPTY
 ============= MAKE output : [aphtu] 
 -------- stdout:  ---------------------------------
 Scanning dependencies of target gtest
-[  4%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-[  8%] Linking CXX static library ../../../lib/libgtest.a
-[  8%] Built target gtest
+[  5%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 10%] Linking CXX static library ../../../lib/libgtest.a
+[ 10%] Built target gtest
 Scanning dependencies of target testB
-[ 12%] Building CXX object CMakeFiles/testB.dir/_tests/_test_files/testB.cpp.o
-[ 16%] Building CXX object CMakeFiles/testB.dir/includes/lab_app/lab_app.cpp.o
+[ 15%] Building CXX object CMakeFiles/testB.dir/_tests/_test_files/testB.cpp.o
 [ 20%] Building CXX object CMakeFiles/testB.dir/includes/stub/stub.cpp.o
 [ 25%] Linking CXX executable bin/testB
 [ 25%] Built target testB
 Scanning dependencies of target testA
-[ 29%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
-[ 33%] Building CXX object CMakeFiles/testA.dir/includes/lab_app/lab_app.cpp.o
-[ 37%] Building CXX object CMakeFiles/testA.dir/includes/stub/stub.cpp.o
-[ 41%] Linking CXX executable bin/testA
-[ 41%] Built target testA
+[ 30%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
+[ 35%] Building CXX object CMakeFiles/testA.dir/includes/stub/stub.cpp.o
+[ 40%] Linking CXX executable bin/testA
+[ 40%] Built target testA
 Scanning dependencies of target basic_test
 [ 45%] Building CXX object CMakeFiles/basic_test.dir/_tests/_test_files/basic_test.cpp.o
-[ 50%] Building CXX object CMakeFiles/basic_test.dir/includes/lab_app/lab_app.cpp.o
-[ 54%] Building CXX object CMakeFiles/basic_test.dir/includes/stub/stub.cpp.o
-[ 58%] Linking CXX executable bin/basic_test
-[ 58%] Built target basic_test
+[ 50%] Building CXX object CMakeFiles/basic_test.dir/includes/stub/stub.cpp.o
+[ 55%] Linking CXX executable bin/basic_test
+[ 55%] Built target basic_test
 Scanning dependencies of target main
-[ 62%] Building CXX object CMakeFiles/main.dir/main.cpp.o
-[ 66%] Building CXX object CMakeFiles/main.dir/includes/lab_app/lab_app.cpp.o
-[ 70%] Building CXX object CMakeFiles/main.dir/includes/stub/stub.cpp.o
-[ 75%] Linking CXX executable bin/main
-[ 75%] Built target main
+[ 60%] Building CXX object CMakeFiles/main.dir/main.cpp.o
+[ 65%] Building CXX object CMakeFiles/main.dir/includes/stub/stub.cpp.o
+[ 70%] Linking CXX executable bin/main
+[ 70%] Built target main
 Scanning dependencies of target gmock
-[ 79%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
-[ 83%] Linking CXX static library ../../../lib/libgmock.a
-[ 83%] Built target gmock
+[ 75%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 80%] Linking CXX static library ../../../lib/libgmock.a
+[ 80%] Built target gmock
 Scanning dependencies of target gmock_main
-[ 87%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
-[ 91%] Linking CXX static library ../../../lib/libgmock_main.a
-[ 91%] Built target gmock_main
+[ 85%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 90%] Linking CXX static library ../../../lib/libgmock_main.a
+[ 90%] Built target gmock_main
 Scanning dependencies of target gtest_main
 [ 95%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 [100%] Linking CXX static library ../../../lib/libgtest_main.a

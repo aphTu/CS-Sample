@@ -1,8 +1,6 @@
 #include "gtest/gtest.h"
 #include <iostream>
 #include <iomanip>
-#include "..\..\includes\two_d_functions\two_d_functions.h"
-#include "..\..\includes\array_functions\array_functions.h"
 #include "..\..\includes\plane\plane.h"
 #include "..\..\includes\lab\lab.h"
 using namespace std;
@@ -192,7 +190,7 @@ bool test_index_is_valid(bool debug =false){
 
   if(debug){
     cout << "sizes array is: ";
-    print_array(sizes,size,capacity);
+    print_array(sizes);
   }
   if(1){
     row = 3;
@@ -227,7 +225,7 @@ bool test_index_is_valid(bool debug =false){
 
   if(debug){
     cout << "sizes array is: ";
-    print_array(sizes,size,capacity);
+    print_array(sizes);
   }
   if(1){
     row = 3;
@@ -255,7 +253,7 @@ bool test_index_is_valid(bool debug =false){
 
   if(debug){
     cout << "sizes array is: ";
-    print_array(sizes,size,capacity);
+    print_array(sizes);
   }
   if(1){
     row = 3;
@@ -284,7 +282,7 @@ bool test_index_is_valid(bool debug =false){
 
   if(debug){
     cout << "sizes array is: ";
-    print_array(sizes,size,capacity);
+    print_array(sizes);
   }
   if(1){
     row = 3;
@@ -953,7 +951,7 @@ TEST(TEST_READ_TWOD,TestReadTwod){
 }
 
 TEST(TEST_WRITE_TWOD,TestWriteTwod){
-  EXPECT_EQ(1,test_write_twod(true));
+  EXPECT_EQ(1,test_write_twod(false));
 }
 
 TEST(TEST_SEARCH_TWOD,TestSearchTwodBool){

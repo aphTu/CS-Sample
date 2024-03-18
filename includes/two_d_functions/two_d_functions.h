@@ -88,14 +88,14 @@ bool index_is_valid(int* sizes, int row, int col){
   //how_many_value find how many row the 2d array actually have, does not count -1
   int* sizes_p = row + sizes; 
   int how_many_value = array_size(sizes);
-  const bool debug = false;
+  const bool debug = true;
   if(debug){
   cout << "how_many_value: " << how_many_value << " and sizes_p is " << *sizes_p << endl; 
   }
   //check if the row given is within the boundary of row in the 2d array
-  if(row <= how_many_value) {
+  if(row < how_many_value) {
     //if true, it then check if col given is within the col in the 2d array
-    if(col <= *sizes_p){
+    if(col < *sizes_p){
     return true;
     }
     return false;
@@ -306,6 +306,8 @@ ostream& print_twod(T** twod, int* sizes, ostream& outs){
     row_walker++;
     sizes_w++;
   }
+
+  return cout;
 }
 
 template <class T>

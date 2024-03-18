@@ -11,7 +11,8 @@ int **init_lab(int* stations);
 bool login(int** labs, int lab, int station, int id);
 bool logout(int** labs, int* sizes, int id);
 
-//=======================================================================
+
+//------------------------------------------//
 int **init_lab(int* stations){
   int** lab = allocate_twod <int>(stations);
   init_twod(lab,stations,0);
@@ -32,7 +33,4 @@ bool logout(int** labs, int* sizes, int id){
   }
   return false;
 }
-
-
-
 #endif

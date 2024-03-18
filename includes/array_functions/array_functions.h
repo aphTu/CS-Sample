@@ -25,7 +25,7 @@ T* reallocate(T* a, int size, int capacity);            //take array, resize it
                                                         //  delete old array
 
 template<class T>
-void print_array(T* a, int size, 
+void prints_array(T* a, int size, 
             int capacity = 0, ostream& outs = cout);    //prints 
                                                         //  (size/capacity)
                                                         //  for debugging
@@ -96,7 +96,7 @@ T* reallocate(T* a, int size, int capacity){
                                                         //  delete old array
 
 template<class T>
-void print_array(T* a, int size, int capacity, ostream& outs){
+void prints_array(T* a, int size, int capacity, ostream& outs){
   T* a_p = a;
   cout << "(" << size << "/" << capacity <<") ["; 
   print(a_p, size);

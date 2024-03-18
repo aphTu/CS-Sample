@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include "includes\lab\lab.cpp"
+#include "includes/lab_app/lab_app.h"
 
 using namespace std;
 

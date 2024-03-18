@@ -1,11 +1,9 @@
 #include <iostream>
 #include <iomanip>
-#include "lab.h"
+#include "lab_app.h"
 
 using namespace std;
 
-void menu(int** labs, int*sizes);
-void choice_i(int** labs, int* sizes);
 
 
 void menu(int** labs, int* sizes){

@@ -7,8 +7,8 @@ score:         [0 /0]
 class:         CS003A 36335
 github page:   <a href="https://github.com/barkeshli-CS003A-classroom/09_p3_p5_lab_and_plane-aphtu " target = "_blank">GitHub</a>
 discord:       
-timestamp:     03/17/2024 00:42:13
-commit hash:   749ddaf
+timestamp:     03/17/2024 19:44:31
+commit hash:   11ab139
 Canvas         <a href="https://canvas.pasadena.edu/courses/1142591/gradebook/speed_grader?assignment_id=9956113&student_id=3865877" target = "_blank">Canvas</a>
 grader:        pi(posix)
 ===========================================================
@@ -24,50 +24,16 @@ Scanning dependencies of target gtest
 [  8%] Built target gtest
 Scanning dependencies of target testB
 [ 12%] Building CXX object CMakeFiles/testB.dir/_tests/_test_files/testB.cpp.o
-[ 16%] Building CXX object CMakeFiles/testB.dir/includes/lab/lab.cpp.o
-[ 20%] Building CXX object CMakeFiles/testB.dir/includes/stub/stub.cpp.o
-[ 25%] Linking CXX executable bin/testB
-[ 25%] Built target testB
-Scanning dependencies of target testA
-[ 29%] Building CXX object CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o
-[ 33%] Building CXX object CMakeFiles/testA.dir/includes/lab/lab.cpp.o
-[ 37%] Building CXX object CMakeFiles/testA.dir/includes/stub/stub.cpp.o
-[ 41%] Linking CXX executable bin/testA
+[ 16%] Building CXX object CMakeFiles/testB.dir/includes/lab_app/lab_app.cpp.o
 
 -------- stderr:  ---------------------------------
-In file included from /includes/lab/lab.h:5,
-                 from /includes/lab/lab.cpp:3:
-/includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/includes/lab/../../includes/two_d_functions/two_d_functions.h:309:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  309 | }
-      | ^
-In file included from /_tests/_test_files/../../includes/lab/lab.h:5,
-                 from /_tests/_test_files/testA.cpp:7:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/_tests/_test_files/../../includes/lab/../../includes/two_d_functions/two_d_functions.h:309:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  309 | }
-      | ^
-In file included from /includes/lab/lab.h:5,
-                 from /includes/lab/lab.cpp:3:
-/includes/lab/../../includes/two_d_functions/two_d_functions.h: In function ‘std::ostream&amp; print_twod(T**, int*, std::ostream&amp;)’:
-/includes/lab/../../includes/two_d_functions/two_d_functions.h:309:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  309 | }
-      | ^
-/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `array_size(int*)&#x27;:
-lab.cpp:(.text+0x0): multiple definition of `array_size(int*)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x0): first defined here
-/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `print_array(int*)&#x27;:
-lab.cpp:(.text+0x80): multiple definition of `print_array(int*)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x80): first defined here
-/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `index_is_valid(int*, int, int)&#x27;:
-lab.cpp:(.text+0x27c): multiple definition of `index_is_valid(int*, int, int)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x27c): first defined here
-/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `init_lab(int*)&#x27;:
-lab.cpp:(.text+0x408): multiple definition of `init_lab(int*)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x408): first defined here
-/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `login(int**, int, int, int)&#x27;:
-lab.cpp:(.text+0x498): multiple definition of `login(int**, int, int, int)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x498): first defined here
-/usr/bin/ld: CMakeFiles/testA.dir/includes/lab/lab.cpp.o: in function `logout(int**, int*, int)&#x27;:
-lab.cpp:(.text+0x574): multiple definition of `logout(int**, int*, int)&#x27;; CMakeFiles/testA.dir/_tests/_test_files/testA.cpp.o:testA.cpp:(.text+0x574): first defined here
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/testA.dir/build.make:115: bin/testA] Error 1
-make[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/testA.dir/all] Error 2
+In file included from /includes/lab_app/lab_app.cpp:3:
+/includes/lab_app/lab_app.h:3:10: fatal error: ..\..\includes\lab\lab.h: No such file or directory
+    3 | #include &quot;..\..\includes\lab\lab.h&quot;
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/testB.dir/build.make:76: CMakeFiles/testB.dir/includes/lab_app/lab_app.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:144: CMakeFiles/testB.dir/all] Error 2
 make: *** [Makefile:141: all] Error 2
 
 ============= CMAKE output: [aphtu] 

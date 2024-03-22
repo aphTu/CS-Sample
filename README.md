@@ -81,9 +81,59 @@ labs are:
      0     |     0
      0     |     0     |    13     |     0
 Successfully login into lab 5, station 2
-Bringing user back into main program<br/><br/>
+Bringing user back into main program
+What lab station would you like to login?
+Enter the lab number, station number, and id number: 4 1 3
+lab: 4, station: 1, id: 3
+labs are:
+     0     |     0     |     0     |     0     |    12     |     0
+     0     |     0
+     0
+     0     |     0     |     0     |     0     |     0     |    12     |     0
+     0     |     3
+     0     |     0     |    13     |     0
+Successfully login into lab 4, station 1
+Bringing user back into main program
+
+//-------------------------//
+  Log[i]n, Log[o]ut, or [E]xit
+Please enter what you would like to do: o
+
+What lab station would you like to logout?
+Enter the id number you would like to log out of: 12 
+labs are:
+     0     |     0     |     0     |     0     |     0     |     0
+     0     |     0
+     0
+     0     |     0     |     0     |     0     |     0     |     0     |     0
+     0     |     3
+     0     |     0     |    13     |     0
+Successfully logout of all lab and station
+Bringing user back into main program
+
+//-------------------------//
+Log[i]n, Log[o]ut, or [E]xit
+Please enter what you would like to do: o
+
+What lab station would you like to logout?
+Enter the id number you would like to log out of: 3
+labs are:
+     0     |     0     |     0     |     0     |     0     |     0
+     0     |     0
+     0
+     0     |     0     |     0     |     0     |     0     |     0     |     0
+     0     |     0
+     0     |     0     |    13     |     0
+Successfully logout of all lab and station
+Bringing user back into main program
+
+//-------------------------//
+Log[i]n, Log[o]ut, or [E]xit
+Please enter what you would like to do: E
+Thank you for using the program, exiting
+<br/><br/>
 </pre>
-# testB.cpp output:
+# Plane App output:
 <pre>
 <br/><br/><br/><br/>
 </pre>

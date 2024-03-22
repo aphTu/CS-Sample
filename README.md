@@ -1,27 +1,26 @@
 
 # Work Report
 
-## Name: <ins> your name goes here </ins>
-
 ## Features:
+Two Apps, labs, and plane
+The lab app takes in a list of labs and how many stations they have
+  - user can choose to reserve a specific lab with their ID and choose to log out by giving their ID
 
-- Not Implemented:
-  - what features have been implemented
+The plane app creates 7 rows and 4 columns of seats
+  - user can choose to reserve specific seats and cancel their reservation
 
 <br><br>
 
 - Implemented:
-  - what has been implemented
+  - Implemented the menu for both plane and lab app
+  - With their respective reservation and cancelling
 
-<br><br>
-
-- Partly implemented:
-  - what features have not been implemented
+<br><br> 
 
 <br><br>
 
 - Bugs
-  - Known bugs
+  - If input a char or string character when it is asking for row/seat or station/labs, it will cause an infinite loop
 
 <br><br>
 

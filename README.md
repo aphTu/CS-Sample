@@ -29,14 +29,6 @@
 
 - Any thoughts you may have and would like to share.
 
-# **output**
-<pre>
-<br/><br/><br/><br/>
-</pre>
-
-
-<br/><br/>
-
 # Lab App output:
 <pre>
 <br/><br/>Lab App Output

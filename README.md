@@ -135,7 +135,145 @@ Thank you for using the program, exiting
 </pre>
 # Plane App output:
 <pre>
-<br/><br/><br/><br/>
+<br/><br/>
+Welcome to PLANE program
+
+//-------------------------//
+[R]eserve a spot, [C]anceled a reservation, or [E]xit
+Please enter what you would like to do: R 
+
+What row & seat would you like to reserve?
+Enter the row & seat number: 3 1 
+row: 3, seat: 1
+plane are:
+        A     B     C     D
+[1]     A     B     C     D
+[2]     A     B     C     D
+[3]     A     B     C     D
+[4]     A     X     C     D
+[5]     A     B     C     D
+[6]     A     B     C     D
+[7]     A     B     C     D
+Successfully reserve row 3, seat 1
+Bringing user back into main program
+
+//-------------------------//
+[R]eserve a spot, [C]anceled a reservation, or [E]xit
+Please enter what you would like to do: R
+
+What row & seat would you like to reserve?
+Enter the row & seat number: 5 2
+row: 5, seat: 2
+plane are:
+        A     B     C     D
+[1]     A     B     C     D
+[2]     A     B     C     D
+[3]     A     B     C     D
+[4]     A     X     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+Successfully reserve row 5, seat 2
+Bringing user back into main program
+
+//-------------------------//
+[R]eserve a spot, [C]anceled a reservation, or [E]xit
+Please enter what you would like to do: R
+
+What row & seat would you like to reserve?
+Enter the row & seat number: 0 3
+row: 0, seat: 3
+plane are:
+        A     B     C     D
+[1]     A     B     C     X
+[2]     A     B     C     D
+[3]     A     B     C     D
+[4]     A     X     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+Successfully reserve row 0, seat 3
+Bringing user back into main program
+
+//-------------------------//
+[R]eserve a spot, [C]anceled a reservation, or [E]xit
+Please enter what you would like to do: R
+
+What row & seat would you like to reserve?
+Enter the row & seat number: 0 3
+row: 0, seat: 3
+plane are:
+        A     B     C     D
+[1]     A     B     C     X
+[2]     A     B     C     D
+[3]     A     B     C     D
+[4]     A     X     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+The row and/or seat is occupied. Please choose a different one
+Enter the row & seat number: 1 2
+row: 1, seat: 2
+plane are:
+        A     B     C     D
+[1]     A     B     C     X
+[2]     A     B     X     D
+[3]     A     B     C     D
+[4]     A     X     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+Successfully reserve row 1, seat 2
+Bringing user back into main program
+
+//-------------------------//
+[R]eserve a spot, [C]anceled a reservation, or [E]xit
+Please enter what you would like to do: C
+
+What row & seat would you like to cancel the reservation of?
+Enter the row & seat you would like to cancel: 3 1
+seats are:
+        A     B     C     D
+[1]     A     B     C     X
+[2]     A     B     X     D
+[3]     A     B     C     D
+[4]     A     B     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+Successfully canceled row 3 & seat 1
+Bringing user back into main program
+What row & seat would you like to cancel the reservation of?
+Enter the row & seat you would like to cancel: 0 0
+seats are:
+        A     B     C     D
+[1]     A     B     C     X
+[2]     A     B     X     D
+[3]     A     B     C     D
+[4]     A     B     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+The row & seat is not reserve
+Please input the correct row & seat you wishes to [c]ancel or [e]xit to main program: C
+Enter the row & seat you would like to cancel: 0 3 
+seats are:
+        A     B     C     D
+[1]     A     B     C     D
+[2]     A     B     X     D
+[3]     A     B     C     D
+[4]     A     B     C     D
+[5]     A     B     C     D
+[6]     A     B     X     D
+[7]     A     B     C     D
+Successfully canceled row 0 & seat 3
+Bringing user back into main program
+
+//-------------------------//
+[R]eserve a spot, [C]anceled a reservation, or [E]xit
+Please enter what you would like to do: E
+Thank you for using the program, exiting
+<br/><br/>
 </pre>
 
 
